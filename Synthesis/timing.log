@@ -1,0 +1,87 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : geofence
+Version: Q-2019.12
+Date   : Sat Mar  2 16:14:13 2024
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: DATA_REG_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_counter_0_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  geofence           tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  DATA_REG_reg[1]/CK (DFFQX1)              0.00       0.50 r
+  DATA_REG_reg[1]/Q (DFFQX1)               0.70       1.20 r
+  U1390/Y (INVXL)                          0.46       1.66 f
+  U2902/Y (OA22X1)                         0.48       2.14 f
+  intadd_0/U5/CO (ADDFXL)                  0.51       2.65 f
+  intadd_0/U4/CO (ADDFXL)                  0.53       3.18 f
+  intadd_0/U3/CO (ADDFXL)                  0.53       3.71 f
+  intadd_0/U2/CO (ADDFXL)                  0.72       4.43 f
+  U1418/Y (OA22X1)                         0.71       5.14 f
+  U1420/Y (OAI22X1)                        0.62       5.76 r
+  U1422/Y (AOI2BB2X1)                      0.48       6.24 f
+  U1424/Y (OAI22X1)                        0.65       6.89 r
+  U1426/Y (AOI2BB2X1)                      0.48       7.38 f
+  U1428/Y (OAI22X1)                        0.65       8.03 r
+  U1430/Y (AOI2BB2X1)                      0.48       8.51 f
+  U1432/Y (OAI22X1)                        0.65       9.16 r
+  U1434/Y (AOI2BB2X1)                      0.48       9.64 f
+  U1436/Y (OAI22X1)                        0.65      10.29 r
+  U1438/Y (AOI2BB2X1)                      0.48      10.78 f
+  U1440/Y (OAI22X1)                        0.65      11.43 r
+  U1442/Y (AOI2BB2X1)                      0.48      11.91 f
+  U1443/Y (OAI22X1)                        0.65      12.56 r
+  U1445/Y (AOI2BB2X1)                      0.48      13.04 f
+  U1447/Y (OAI22X1)                        0.63      13.67 r
+  U1449/Y (AO22X1)                         0.48      14.15 r
+  U1228/Y (INVXL)                          0.29      14.44 f
+  U1451/Y (OAI22X1)                        0.53      14.97 r
+  U1452/Y (AO22X1)                         0.48      15.44 r
+  U1226/Y (INVXL)                          0.28      15.72 f
+  U1223/Y (NOR2XL)                         0.68      16.40 r
+  U1227/Y (INVXL)                          0.40      16.80 f
+  U1453/Y (OAI21XL)                        0.51      17.31 r
+  U1454/Y (OAI31XL)                        0.32      17.63 f
+  U1455/Y (AOI31X1)                        0.59      18.22 r
+  U1456/Y (AOI2BB2X1)                      0.34      18.56 f
+  U1929/Y (OAI21XL)                        0.77      19.33 r
+  U1932/Y (AOI211X1)                       0.56      19.89 f
+  U1933/Y (AO21X1)                         0.58      20.46 f
+  U1935/Y (OAI22XL)                        0.42      20.88 r
+  U1936/Y (OAI21XL)                        0.29      21.17 f
+  U1937/Y (OAI21XL)                        0.32      21.49 r
+  state_counter_0_reg[2]/D (DFFRX1)        0.00      21.49 r
+  data arrival time                                  21.49
+
+  clock clk (rise edge)                   30.00      30.00
+  clock network delay (ideal)              0.50      30.50
+  clock uncertainty                       -0.10      30.40
+  state_counter_0_reg[2]/CK (DFFRX1)       0.00      30.40 r
+  library setup time                      -0.29      30.11
+  data required time                                 30.11
+  -----------------------------------------------------------
+  data required time                                 30.11
+  data arrival time                                 -21.49
+  -----------------------------------------------------------
+  slack (MET)                                         8.62
+
+
+1
